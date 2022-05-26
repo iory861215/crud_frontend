@@ -1,0 +1,127 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Montserrat:wght@100;500&display=swap');
+
+/* Aqui van los colores que se van a definir */
+:root {}
+
+/* Para ocupar toda la pantalla */
+html,
+body {
+    font-family: 'DM Sans', sans-serif;;
+    height: 100%;
+    background-color: #F3F4F8;
+    margin: 0;
+}
+
+.header {
+    background-color: #F3F4F8;
+    display: flex;
+    align-items: flex-start;
+
+}
+
+.logo {
+    width: 10%;
+    height: 5vw;
+    text-align: center;
+}
+
+.buscador {
+    width: 90%;
+    height: 5vw;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 0px 0px 0px 20px;
+}
+
+
+input[type=text] {
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    background: #F3F7FA;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.search-container button {
+    padding: 15px;
+    margin-top: 8px;
+    background: #F3F7FA;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background: #232360;
+    color: #fff;
+}
+
+.container-header {
+    padding: 20vh 20vh 5vh 20vh;
+    display: flex;
+    width: auto;
+}
+
+.title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    color: #232360;
+    width: 95%;
+}
+
+.add {
+    width: 5%;
+    text-align: center;
+}
+
+.circle-add {
+    width: 20px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: #F6BC3E;
+}
+
+.circle-add:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: 0.3s;
+}
+
+
+.container{
+    padding: 0vh 20vh 0vh 20vh;
+    display: flex;
+    width: auto;
+}
+
+.card{
+    /* padding: 2vh; */
+    background-color: #FFFFFF;
+    width: 100%;
+    border-radius:20px;
+}
+
+.card:hover{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: 0.3s;
+}
+.person{
+    background-color: #FBFAFF;
+    width: 25%;
+    border-radius: 20px 0px 0px 20px;
+    padding: 20px;
+    text-align: center;
+}
+.social{
+    display: block;
+    padding: 10px;
+}
+.name{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    color: #000000;
+}
