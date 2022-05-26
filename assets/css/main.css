@@ -2,19 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Montserrat:wght@100;500&display=swap');
 
 /* Aqui van los colores que se van a definir */
-:root {}
+:root {
+  --color-principal: #F3F4F8;
+  --color-secundario: #ffffff;
+}
 
 /* Para ocupar toda la pantalla */
 html,
 body {
     font-family: 'DM Sans', sans-serif;;
     height: 100%;
-    background-color: #F3F4F8;
+    background-color: var(--color-principal);
     margin: 0;
 }
 
 .header {
-    background-color: #F3F4F8;
+    background-color: var(--color-principal);
     display: flex;
     align-items: flex-start;
 
@@ -30,7 +33,7 @@ body {
     width: 90%;
     height: 5vw;
     text-align: center;
-    background-color: #fff;
+    background-color: var(--color-secundario);
     border-radius: 0px 0px 0px 20px;
 }
 
@@ -55,7 +58,7 @@ input[type=text] {
 
 .search-container button:hover {
     background: #232360;
-    color: #fff;
+    color: var(--color-secundario);
 }
 
 .container-header {
@@ -99,7 +102,7 @@ input[type=text] {
 
 .card{
     /* padding: 2vh; */
-    background-color: #FFFFFF;
+    background-color: var(--color-secundario);
     width: 100%;
     border-radius:20px;
 }
