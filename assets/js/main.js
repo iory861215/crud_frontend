@@ -1,36 +1,80 @@
 
+/************************* CRUD EN INDER QUE CARGA LOS DATOS Y HTML */
+// Objeto de pruebas de como llegarian los datos desde el back
+const datos = {
+  1: {
+    razonsocial: "Ejemplo",
+    nombre: "Luis Casa Martinez",
+    documento: 26282355,
+    telefono: 1162234450,
+  },
+  2: {
+    razonsocial: "Ejemplo",
+    nombre: "Roberto Morneo Galeano",
+    documento: 26282355,
+    telefono: 1144605540,
+  },
+  3: {
+    razonsocial: "Ejemplo",
+    nombre: "Kilber Luna Martinez",
+    documento: 26282355,
+    telefono: 1167233450,
+  },
+  4: {
+    razonsocial: "Ejemplo",
+    nombre: "Rosa Maria Casas",
+    documento: 26282355,
+    telefono: 1167233450,
+  },
+};
 
-// ARRAY CON LOS DATOS MIENTRAS LLEGA EL BACK
+console.log("carga de llegada");
+// console.log(datos);
 
-const datos = { 
-    1 : {
-        razonsocial: 'Ejemplo',
-        nombre: 'Juan Ramiro mosqueda',
-        documento: '26282355',
-        telefono: '1162234450',
-
-    },
-    2 : {
-        razonsocial: 'Ejemplo',
-        nombre: 'Juan Ramiro mosqueda',
-        documento: '26282355',
-        telefono: '1162234450',
-    },
-    3 : {
-        razonsocial: 'Ejemplo',
-        nombre: 'Juan Ramiro mosqueda',
-        documento: '26282355',
-        telefono: '1162234450',
-    },
+function crearHTML(datos) {
+  console.log(datos);
+  // 1. Creo el elemento div
+  let divElement = document.createElement("div");
+  // 2. Agrego una clase principal para el div que cree
+  divElement.classList.add("card");
+  // 2. Agrego el contenido interno
+  divElement.innerHTML =
+    `
+    <div class="person">
+        <span class="social">Razon Social : ` +
+    datos.razonsocial +
+    `</span>
+        <span class="name">` +
+    datos.nombre +
+    `</span>
+    </div>
+    <div class="description-document">
+        <span class="social">Documento</span>
+        <span class="name">` +
+    datos.documento +
+    `</span>
+    </div>
+    <div class="description-telefono">
+        <span class="social">Teléfono </span>
+        <span class="name">` +
+    datos.telefono +
+    `</span>
+    </div>
+    <div class="actions">
+        <div class="icon-actions"><i class="fa fa-eye"></i></div>
+        <a href="./actualizar.html"><div class="icon-actions"><i class="fa fa-pen"></i></div></a>
+        <div class="icon-actions"><i class="fa fa-trash"></i></div>
+    </div>
+    `;
+  // 4. Agrego los elementos en la web seleccionando la clase del contenedor
+  let contenedorCrud = document.querySelector(".container");
+  contenedorCrud.appendChild(divElement);
 }
 
-// console.log(datos.length)
-
-var items = document.querySelector('.item');
-
-
+//  Repito los datos la cantidad de datos en el objeto datos
 for (const key in datos) {
-    console.log('hola')
-    document.getElementById("myList1").appendChild(clone);
-    console.log(`${key}: ${datos[key]}`);
+// Llamo a la funcion que crea el HTML y le pasos los datos del array(objeto) donde datos es todo y key es para determinar cada dato por separado en el ciclo
+  crearHTML(datos[key]);
 }
+
+/************************* CRUD EN INDER QUE CARGA LOS DATOS Y HTML */
