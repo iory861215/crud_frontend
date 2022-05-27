@@ -29,9 +29,12 @@ const datos = {
 };
 
 console.log("carga de llegada");
+
+// Cuando alguien entra le quito 
+localStorage.removeItem('id_seleccionado')
 // console.log(datos);
 
-function crearHTML(datos) {
+function crearHTML(datos, key) {
   console.log(datos);
   // 1. Creo el elemento div
   let divElement = document.createElement("div");
@@ -62,10 +65,11 @@ function crearHTML(datos) {
     </div>
     <div class="actions">
         <div class="icon-actions"><i class="fa fa-eye"></i></div>
-        <a href="./actualizar.html"><div class="icon-actions"><i class="fa fa-pen"></i></div></a>
+        <a  onClick="editar(this)" id="`+key+`" ><div class="icon-actions"><i class="fa fa-pen"></i></div></a>
         <div class="icon-actions"><i class="fa fa-trash"></i></div>
     </div>
     `;
+    // href="./actualizar.html" 
   // 4. Agrego los elementos en la web seleccionando la clase del contenedor
   let contenedorCrud = document.querySelector(".container");
   contenedorCrud.appendChild(divElement);
@@ -74,7 +78,23 @@ function crearHTML(datos) {
 //  Repito los datos la cantidad de datos en el objeto datos
 for (const key in datos) {
 // Llamo a la funcion que crea el HTML y le pasos los datos del array(objeto) donde datos es todo y key es para determinar cada dato por separado en el ciclo
-  crearHTML(datos[key]);
+// Paso la key para el edit y el update.. El ver para todo 
+crearHTML(datos[key], key);
+}
+
+
+function editar(obj)
+{
+    // obj obtengo todo el objeto
+    console.log('clic funciono ?')
+    // busco el id dentro del objeto
+    var id = obj.id;
+    console.log(id+' este es el id')
+    //le mando el id al localstorage
+    localStorage.setItem('id_seleccionado',id)
+
+    window.location.replace('actualizar.html')
+    
 }
 
 /************************* CRUD EN INDER QUE CARGA LOS DATOS Y HTML */
