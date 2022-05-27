@@ -2,52 +2,63 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio de CRUD</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
     <script src="assets/js/main.js"></script>
 </head>
 
 <body>
     <section class="header">
         <div class="logo">
-            <img src="assets/img/Logo.png" alt="" srcset="">
+            <img src="assets/img/Logo.png" alt="" srcset="" />
             <div>Logo crud</div>
         </div>
         <div class="buscador">
             <div class="search-container">
-                <form action="/action_page.php">
-                    <input type="text" placeholder="Buscador.." name="search">
+                <div class="container-buscador">
+                    <input type="text" placeholder="Buscador.." name="search" />
                     <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
+                </div>
             </div>
         </div>
-
     </section>
 
     <section class="container-header">
-        <div class="title">
-            Registro Crud
-        </div>
-        
+        <div class="title">Registro Crud</div>
+
         <div class="add">
             <div class="circle-add"><i class="fa fa-plus"></i></div>
         </div>
     </section>
-    
-    <section class="container">
-        <div class="card">
-            <div class="person">
-                <span class="social">Razon Social : ejemplo</span>
-                <span class="name">Juan Ramiro mosqueda</span>
+    <!-- CRUD CONTENEDOR  -->
+    <section class="item">
+        <div class="container">
+            <div class="card">
+                <div class="person">
+                    <span class="social">Razon Social : ejemplo</span>
+                    <span class="name">Juan Ramiro mosqueda</span>
+                </div>
+                <div class="description-document">
+                    <span class="social">Documento</span>
+                    <span class="name">26282355</span>
+                </div>
+                <div class="description-telefono">
+                    <span class="social">Teléfono </span>
+                    <span class="name">+54 1162234450</span>
+                </div>
+                <div class="actions">
+                    <div class="icon-actions"><i class="fa fa-eye"></i></div>
+                    <a href="./actualizar.html"><div class="icon-actions"><i class="fa fa-pen"></i></div></a>
+                    <div class="icon-actions"><i class="fa fa-trash"></i></div>
+                </div>
             </div>
-            <div class="description"></div>
-            <div class="actions"></div>
         </div>
     </section>
+    <!-- CRUD CONTENEDOR  -->
 </body>
 
 </html>

@@ -1,16 +1,16 @@
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Montserrat:wght@100;500&display=swap');
 
 /* Aqui van los colores que se van a definir */
 :root {
-  --color-principal: #F3F4F8;
-  --color-secundario: #ffffff;
+    --color-principal: #F3F4F8;
+    --color-secundario: #ffffff;
 }
 
 /* Para ocupar toda la pantalla */
 html,
 body {
-    font-family: 'DM Sans', sans-serif;;
+    font-family: 'DM Sans', sans-serif;
+    ;
     height: 100%;
     background-color: var(--color-principal);
     margin: 0;
@@ -19,10 +19,10 @@ body {
 .header {
     background-color: var(--color-principal);
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    height: 10%;
 
 }
-
 .logo {
     width: 10%;
     height: 5vw;
@@ -31,7 +31,6 @@ body {
 
 .buscador {
     width: 90%;
-    height: 5vw;
     text-align: center;
     background-color: var(--color-secundario);
     border-radius: 0px 0px 0px 20px;
@@ -39,21 +38,27 @@ body {
 
 
 input[type=text] {
-    margin-top: 8px;
     font-size: 17px;
     border: none;
     background: #F3F7FA;
     padding: 15px;
-    border-radius: 5px;
+    width: 40%;
+}
+.search-container {
+    height: -webkit-fill-available;
 }
 
 .search-container button {
     padding: 15px;
-    margin-top: 8px;
     background: #F3F7FA;
     font-size: 17px;
     border: none;
     cursor: pointer;
+}
+.container-buscador{
+    height: -webkit-fill-available;
+    display: inline-flex;
+    padding: 20px;
 }
 
 .search-container button:hover {
@@ -62,7 +67,7 @@ input[type=text] {
 }
 
 .container-header {
-    padding: 20vh 20vh 5vh 20vh;
+    padding: 5vh 20vh 5vh 20vh;
     display: flex;
     width: auto;
 }
@@ -88,43 +93,165 @@ input[type=text] {
     background-color: #F6BC3E;
 }
 
+a:link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .circle-add:hover {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    transition: 0.3s;
+    /* transition: 0.3s; */
+    animation: anim-card 0.6s linear;
 }
 
 
-.container{
-    padding: 0vh 20vh 0vh 20vh;
+.container {
+    padding: 0vh 20vh 5vh 20vh;
     display: flex;
     width: auto;
 }
 
-.card{
+.card {
     /* padding: 2vh; */
     background-color: var(--color-secundario);
     width: 100%;
-    border-radius:20px;
+    border-radius: 20px;
+    display: flex;
 }
+.edit {
+    padding: 5vh 20vh 5vh 20vh;
+    text-align: center;
+    display: block;
+}
+/* .edit-crud .name{
+    display: block;
+} */
 
-.card:hover{
+.card:hover {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     transition: 0.3s;
 }
-.person{
+
+.person {
     background-color: #FBFAFF;
     width: 25%;
     border-radius: 20px 0px 0px 20px;
     padding: 20px;
     text-align: center;
 }
-.social{
-    display: block;
-    padding: 10px;
+.edit-crud{
+    width: 100%;
+    padding: 5px;
 }
-.name{
+
+.social {
+    display: block;
+    /* padding: 10px; */
+}
+
+.name {
     font-weight: 500;
     font-size: 20px;
     line-height: 26px;
     color: #000000;
+}
+
+.description-document {
+    padding: 20px;
+    text-align: center;
+    width: 20%;
+}
+
+.description-telefono {
+    padding: 20px;
+    text-align: center;
+    width: 20%;
+}
+
+.actions {
+    padding: 20px;
+    text-align: center;
+    width: 20%;
+}
+
+.icon-actions {
+    width: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #EDECFE;
+    display: inline-flex;
+}
+
+
+@keyframes anim-card {
+    from {
+        transform: scale(0.8);
+    }
+
+    80% {
+        transform: scale(1.04);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+
+@media screen and (max-width: 1240px) {
+    body {
+        padding: 0 10px;
+    }
+
+    .container-header {
+        padding: 10vh 5vh 5vh 5vh;
+    }
+
+    .container {
+        padding: 0vh 5vh 5vh 5vh;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+    .header{
+        height: 10vh;
+    }
+    .logo {
+    width: 30%;
+    }
+
+    .container-header {
+        padding: 10vh 5vh 5vh 5vh;
+    }
+
+    .container {
+        padding: 0vh 0vh 1vh 1vh;
+    }
+
+    .card {
+        display: grid;
+    }
+
+    .person {
+        width: auto;
+    }
+
+    .description-document {
+        width: auto;
+
+    }
+
+    .description-telefono {
+        width: auto;
+
+    }
+
+    .actions {
+        width: auto;
+    }
 }
