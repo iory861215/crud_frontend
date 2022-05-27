@@ -67,5 +67,5 @@ for (const key in datos) {
 
 function back(){
   console.log('volver')
-  window.location.replace('/')
+  window.location.replace('./')
 }
