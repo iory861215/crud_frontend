@@ -100,7 +100,6 @@ a:link {
 
 .circle-add:hover {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    /* transition: 0.3s; */
     animation: anim-card 0.6s linear;
 }
 
@@ -112,7 +111,6 @@ a:link {
 }
 
 .card {
-    /* padding: 2vh; */
     background-color: var(--color-secundario);
     width: 100%;
     border-radius: 20px;
@@ -123,9 +121,6 @@ a:link {
     text-align: center;
     display: block;
 }
-/* .edit-crud .name{
-    display: block;
-} */
 
 .card:hover {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
