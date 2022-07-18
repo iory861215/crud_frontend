@@ -87,12 +87,8 @@ crearHTML(datos[key], key);
 
 function remove(id)
 {
-    // obj obtengo todo el objeto
     console.log('remove')
     document.getElementById(id).remove();
-
-    // busco el id dentro del objeto
-    
 }
 
 
