@@ -64,9 +64,9 @@ function crearHTML(datos, key) {
     `</span>
     </div>
     <div class="actions">
-        <div class="icon-actions"><i class="fa fa-eye"></i></div>
-        <a  onClick="editar(this)" id="`+key+`" ><div class="icon-actions"><i class="fa fa-pen"></i></div></a>
-        <div class="icon-actions"><i class="fa fa-trash"></i></div>
+    <a  onClick="ver(this)" id="`+key+`" ><div class="icon-actions"><i class="fa fa-eye"></i></div></a>
+    <a  onClick="editar(this)" id="`+key+`" ><div class="icon-actions"><i class="fa fa-pen"></i></div></a>
+    <div class="icon-actions"><i class="fa fa-trash"></i></div>
     </div>
     `;
     // href="./actualizar.html" 
@@ -94,6 +94,19 @@ function editar(obj)
     localStorage.setItem('id_seleccionado',id)
 
     window.location.replace('actualizar.html')
+    
+}
+function ver(obj)
+{
+    // obj obtengo todo el objeto
+    console.log('clic funciono ?')
+    // busco el id dentro del objeto
+    var id = obj.id;
+    console.log(id+' este es el id')
+    //le mando el id al localstorage
+    localStorage.setItem('id_seleccionado',id)
+
+    window.location.replace('ver.html')
     
 }
 
