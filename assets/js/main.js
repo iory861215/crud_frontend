@@ -40,6 +40,7 @@ function crearHTML(datos, key) {
   let divElement = document.createElement("div");
   // 2. Agrego una clase principal para el div que cree
   divElement.classList.add("card");
+  divElement.setAttribute("id", key+"-card");
   // 2. Agrego el contenido interno
   divElement.innerHTML =
     `
@@ -66,7 +67,7 @@ function crearHTML(datos, key) {
     <div class="actions">
     <a  onClick="ver(this)" id="`+key+`" ><div class="icon-actions"><i class="fa fa-eye"></i></div></a>
     <a  onClick="editar(this)" id="`+key+`" ><div class="icon-actions"><i class="fa fa-pen"></i></div></a>
-    <div class="icon-actions"><i class="fa fa-trash"></i></div>
+    <a  onClick="remove('`+key+`-card')" id="`+key+`" ><div class="icon-actions"><i class="fa fa-trash"></i></div></a>
     </div>
     `;
     // href="./actualizar.html" 
@@ -80,6 +81,18 @@ for (const key in datos) {
 // Llamo a la funcion que crea el HTML y le pasos los datos del array(objeto) donde datos es todo y key es para determinar cada dato por separado en el ciclo
 // Paso la key para el edit y el update.. El ver para todo 
 crearHTML(datos[key], key);
+}
+
+
+
+function remove(id)
+{
+    // obj obtengo todo el objeto
+    console.log('remove')
+    document.getElementById(id).remove();
+
+    // busco el id dentro del objeto
+    
 }
 
 
