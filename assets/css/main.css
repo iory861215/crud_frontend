@@ -48,6 +48,13 @@ input[type=text] {
     padding: 15px;
     width: 40%;
 }
+input[type=text]:read-only {
+    font-size: 17px;
+    border: none;
+    background: var(--background-special);
+    padding: 15px;
+    width: 40%;
+}
 .container input{
     /* border-radius: var(--global-border); */
 }
